@@ -17,6 +17,8 @@ test "El bolichito no es brillante si tiene una pelota y una placa" {
 }
 
 test "El bolichito es monocromático si tiene una remera y una placa roja" {
+	placa.setColor(rojo)
+	placa.setPeso(2400)
 	bolichito.ponerEnMostrador(remera)
 	bolichito.ponerEnVidriera(placa)
 	
@@ -56,7 +58,7 @@ test "El bolichito puede mejorar si tiene una remera y una placa roja" {
 	bolichito.ponerEnMostrador(remera)
 	bolichito.ponerEnVidriera(placa)
 	
-	bolichito.puedeMejorar()
+	assert.that(bolichito.puedeMejorar())
 }
 
 test "El bolichito no puede mejorar si tiene una remera en el mostrador y una pelota en la vidriera" {
