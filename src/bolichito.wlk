@@ -1,5 +1,5 @@
-import objetos.*
 import personas.*
+import objetos.*
 import masObjetos.*
 
 object bolichito {

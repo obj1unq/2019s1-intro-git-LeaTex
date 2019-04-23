@@ -1,0 +1,37 @@
+import objetos.*
+import masObjetos.*
+
+test "El arito es celeste, de cobre y pesa 180 gramos" {
+	assert.that(arito.color() == celeste )
+	assert.that(arito.material() == cobre )
+	assert.that(arito.peso() == 180 )
+}
+
+test "El naranja es un color fuerte" {
+	assert.that(naranja.esFuerte())
+}
+
+test "El banquito es naranja, de madera y pesa 1700 gramos" {
+	assert.that(banquito.color() == naranja)
+	assert.that(banquito.material() == madera )
+	assert.that(banquito.peso() == 1700 )
+}
+
+test "El banquito puede cambiar de color" {
+	assert.that(banquito.color() == naranja)
+	banquito.color(pardo)
+	assert.that(banquito.color() == pardo)
+}
+
+test "La cajita es roja y de cobre" {
+	assert.that(cajita.color() == rojo)
+	assert.that(cajita.material() == cobre)
+}
+
+test "La cajita puede tener un objeto adentro y su peso es la suma" {
+	cajita.ponerAdentro(banquito)
+	assert.that(cajita.peso() == (400 + banquito.peso()))	
+
+	cajita.ponerAdentro(remera)
+	assert.that(cajita.peso() == (400 + remera.peso()))	
+}

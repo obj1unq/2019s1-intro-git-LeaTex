@@ -12,6 +12,7 @@ object banquito {
 	var _color = naranja 
 	
 	method color() { return _color }
+	method color(unColor) { _color = unColor}
 	method material() { return madera }
 	method peso() { return 1700 }
 }
